@@ -1,0 +1,15 @@
+let str="abc def";
+console.log(str.length);
+console.log(str.toUpperCase());
+console.log(str.charAt(3));
+console.log(str.substring(0,3));
+console.log(str.slice(1,4));
+console.log(str.replace("abc","ghi"));
+console.log(str.includes("ghi"));
+console.log(str.startsWith("ghi"));
+console.log(str.endsWith("def"));
+console.log(str.indexOf("ghi"));
+let str2="123";
+console.log(str.concat(str2));
+console.log("Hello ".repeat(3));
+console.log(str.trim());
