@@ -28,10 +28,11 @@ for(let i = a.length-1; i>=0; i--){
 }
 // largest num
 console.log("\n\n")
-l =a[0]
+let l = a[0]
+console.log(l)
 for ( let i of a){
     if (l<i){
-        l=a[i]
+        l=i
     }
 }
 console.log("largest number: ", l)

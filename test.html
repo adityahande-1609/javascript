@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Output</title>
+    <style>
+        .container {
+            width: 400px;
+            /* Changed height to auto so the border fits all content */
+            height: auto; 
+            border: 1px solid black;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .fin {
+            width: 100px;
+            height: 30px;
+            margin: 10px 10px 10px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="myform">
+            <h1 style="text-align: center; margin-top: 0;">FORM</h1>
+            
+            <label for="name">Name</label><br>
+            <input type="text" id="name"><br><br>
+            
+            <label for="password">Password</label><br>
+            <input type="password" id="password"><br><br>
+            
+            <label>Hobbies:</label><br>
+            <input type="checkbox" id="reading" value="Reading">
+            <label for="reading">Reading</label>
+            <input type="checkbox" id="travel" value="Travelling">
+            <label for="travel">Travelling</label>
+            <input type="checkbox" id="cook" value="Cooking">
+            <label for="cook">Cooking</label><br><br>
+            
+            <label>Gender:</label><br>
+            <input type="radio" id="Male" name="gender" value="Male">
+            <label for="Male">Male</label>
+            <input type="radio" id="Female" name="gender" value="Female">
+            <label for="Female">Female</label><br><br>
+            
+            <label for="discription">Tell us about yourself:</label><br>
+            <textarea id="discription" rows="4" style="width: 100%; box-sizing: border-box;"></textarea><br><br>
+            
+            <input type="submit" value="Submit" class="fin">
+            <input type="reset" value="Reset" class="fin">
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById("myform");
+
+        // Listen for submission
+        form.addEventListener("submit", function(event) {
+            // 1. Prevent default page refresh on submit
+            event.preventDefault(); 
+
+            // 2. Read input value inside the event listener when user submits
+            const form_name = document.getElementById("name").value;
+            const form_password = document.getElementById("password").value;
+            const form_about = document.getElementById("discription").value;
+
+            // 3. Log values to console
+            console.log("Name:", form_name);
+            console.log("Password:", form_password);
+            console.log("About:", form_about);
+        });
+    </script>
+</body>
+</html>
