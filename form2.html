@@ -31,17 +31,16 @@
 </head>
 <body>
 <div class="container">
-    <button class="button" onfocus="ofocus()"> on focus</button><br>
+    <button class="button"onblur="oblur()" onfocus="ofocus()"> on focus</button><br>
     <button class="button" onclick="oclick()" ondblclick="dblclick()">on click</button><br>
-    <button class="button" onblur="oblur()">on blur</button><br>
     <select class="item" onchange="ochange()" placeholder="on change" id="list">
         <option value="option 1">first</option>
         <option value="option 2">second</option>
     </select><br>
     <form id="myform">
     <input class="item" type="text" id="text" placeholder="entering input" oninput="oaccept()"><br>
-    <input class="item" type="submit" id="submit"><br>
-    <input class="item" type="reset" id="reset"><br>
+    <input class="item" type="submit" id="submit" ><br>
+    <input class="item" type="reset" id="reset" ><br>
     </form>
 </div>
     <script>
@@ -63,6 +62,11 @@
         function oaccept(){
             console.log("User input")
         }
+        let form = document.getElementById("myform")
+        form.addEventListener("submit",function(event){
+            event.preventDefault()
+            alert("form submitted")
+    })
     </script>
 </body>
 </html>
