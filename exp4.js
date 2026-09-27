@@ -12,4 +12,5 @@ let form = document.getElementById("myform");
         // console.log(traveled)
         // let cooking=document.getElementById("cook").checked
         // console.log(cooking.value)
-        // let gMale = document.getElementById("Male").checked
+        let gMale = document.getElementById("Male").checked;
+});
