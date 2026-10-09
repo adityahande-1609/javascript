@@ -16,7 +16,13 @@
             child = window.open("child.html","Child_Window","width=600 height=400")
         }
         function movewin(){
+            child.moveTo(50,60)
+        }
+        function resizewin(){
             child.resizeTo( 300,600)
+        }
+        function closewin(){
+            child.close()
         }
     </script>
 </body>
