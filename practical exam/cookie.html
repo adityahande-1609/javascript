@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Create session cookie </h3>
+    <button onclick="createsession()">create</button><br><br>
+    <h3>create Persistant cookie</h3>
+    <button onclick="createperssistant()">create</button><br><br>
+    <p id="output"></p>
+    <button onclick="show()">display</button>
+    <script>
+        let a=document.getElementById("name").value;
+        let b=document.getElementById("perssistnat").value
+        function createsession(){
+            document.cookie ="session_user= Aditya;"
+            alert("session cookie created of ", a);
+        }
+        function createperssistant(){
+            document.cookie="perssistant_user= Hande; max-age=100;"
+            alert("perssistant cookie created of ",b);
+        }
+        function show(){
+            output =document.getElementById("output");
+            output.innerText= document.cookie?"Cookie:"+document.cookie:"No cookie found.";
+        }
+
+    </script>
+</body>
+</html>

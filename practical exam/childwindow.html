@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="openwin()">create</button>
+    <button onclick="omove()">move </button>
+    <button onclick="oresize()">resize</button>
+    <button onclick="oclose()">close</button>
+    <script>
+        let child;
+        function openwin(){
+            child=window.open("child.html","child","width=300,height=400");
+        }
+        function omove(){
+            child.moveTo(50,100);
+        }
+        function oresize(){
+            child.resizeTo(50,200);
+        }
+        function oclose(){
+            child.close();
+        }
+    </script>
+</body>
+</html>

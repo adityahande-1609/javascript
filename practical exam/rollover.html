@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>hover over the image to change it </h2>
+    <img src="imp1.jpg" width="200" id="picture" height="100" onmouseover="ochange()" onmouseout="orestore()">
+    <script>
+        function ochange(){
+            document.getElementById("picture").src="img2.jpg";
+        }
+        function orestore(){
+            document.getElementById("picture").src="imp1.jpg";
+        }
+    </script>
+</body>
+</html>
