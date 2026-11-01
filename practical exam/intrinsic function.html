@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="oalert()">Alert</button>
+    <button onclick="oprompt()">Prompt</button>
+    <button onclick="oconfirm()">Confirm</button>
+    <button onclick="intvar()">int num</button>
+    <button onclick="floatvar()">float num</button>
+    <script>
+        function oalert(){
+           alert("This is a alert"); 
+        }
+        function oprompt(){
+            let a= prompt("this a prompt ot acept input");
+            console.log("is this input a string:",isNaN(a));
+        }
+        function oconfirm(){
+            confirm("Click ok to confirm");
+        }
+        function intvar(){
+            let a =prompt("enter a number");
+            parseInt(a);
+            console.log("entered number is:",a);
+            console.log("is this int input a string",isNaN(a));
+        }
+        function floatvar(){
+            let a= prompt("this a prompt ot acept input");
+            parseFloat(a);
+            console.log("entered number is:"+a);
+            console.log("is this input a string:",isNaN(a));
+        }
+    </script>
+</body>
+</html>

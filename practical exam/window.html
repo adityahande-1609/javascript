@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="openwin()">open new window</button>
+    <button onclick="closewin()">close window</button>
+    <button onclick="mov()">Move window</button>
+    <button onclick="res()">Resize Window</button>
+    <p id="output"></p>
+    <script>
+       function openwin () {
+        let child=window.open("child.html","Child","width=400,height=600")
+       }
+       function closewin() {
+        child.close();
+       }
+       function mov() {
+        child.moveTo(100,50)
+       }
+       function res() {
+        child.resizeTo(200,400)
+       }
+    </script>
+</body>
+</html>

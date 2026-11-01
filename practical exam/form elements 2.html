@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin: auto;
+            text-align: center;
+            border: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <button onfocus="ofocus()">Press me</button>
+    <button onblur="oblur()">Press me</button>
+    <button onclick="oclick()">Press me</button>
+    <select name="menu" id="menu" onchange="ochan()" placeholder="select">
+    <option value="">option 1</option>
+    <option value="">option 2</option>
+    </select>
+    <button ondblclick="odclick()">Press me</button>
+    </div>
+    <script>
+        function ofocus(){
+            console.log("element in focus");
+        }
+        function oblur(){
+            console.log("element blured/unfocused");
+        }
+        function oclick(){
+            console.log("button clicked");
+        }
+        function odclick(){
+            console.log("double clicked");
+        }
+        function ochan(){
+            console.log("element changed");
+        }
+    </script>
+</body>
+</html>
